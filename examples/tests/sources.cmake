@@ -1,0 +1,10 @@
+set(CRYPTO_FILES
+  examples/tests/add2.h
+  examples/tests/add2.cpp
+  examples/tests/xor2.h
+  examples/tests/xor2.cpp
+)
+set(MAP_OPTION_TO_CLASSNAME
+  add2:Add2
+  xor2:Xor2
+)

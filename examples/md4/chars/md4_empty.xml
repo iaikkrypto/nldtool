@@ -1,0 +1,8 @@
+<config>
+    <options>
+        <option name="f"  value="md4"/>
+        <option name="n"  value="48"/>
+        <option name="w"  value="32"/>
+    </options>
+    <char value=""/>
+</config>

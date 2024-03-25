@@ -1,0 +1,22 @@
+<config>
+<options>
+  <option name="f"  value="ketje"/>
+  <option name="w"  value="32"/>
+  <option name="r" value="128"/>
+  <option name="n"  value="2"/>
+</options>
+<char value=""/>
+<search reseed="-1" credits="5000" callback="setupchar">
+  <phase twobit_complete="1">
+    <setting prob="2">
+      <mask word="S\d\d" />
+      <guess condition="-" choice_prob="1"/>
+    </setting>
+    <setting prob="1">
+      <mask word="A\d\d" />
+      <mask word="B\d\d" />
+      <guess condition="?" choice_prob="1"/>
+    </setting>
+  </phase>
+</search>
+</config>

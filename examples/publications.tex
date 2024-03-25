@@ -1,0 +1,642 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{filecontents}
+\usepackage{enumitem}
+%\setlist[itemize]{topsep=0pt, itemsep=-1ex, partopsep=1ex, parsep=1ex}
+\setlist[2]{noitemsep}
+\usepackage[backend=biber,
+            %giveninits=true,
+            maxnames=16,
+            minnames=16,
+           ]{biblatex}
+\addbibresource{\jobname.bib}
+\DeclareFieldFormat*{title}{\bfseries #1} 
+\DeclareFieldFormat*{booktitle}{#1}  
+\DeclareFieldFormat*{journaltitle}{#1}  
+\DeclareFieldFormat{eprint}{See also: \url{http://ia.cr/#1}}
+%\newcommand{\itemcite}[1]{\begin{itemize}\item \fullcite{#1}\end{itemize}}
+
+\usepackage[hidelinks]{hyperref}
+
+\colorlet{done}{green!50!black}
+\colorlet{todo}{red!50!black}
+\newcommand{\hashlink}[2][black]{\href{https://extgit.iaik.tugraz.at/krypto/nldtool/blob/master/hash/#2}{\color{#1}\nolinkurl{#2}}}
+\newcommand{\hashshrt}[3][black]{\href{https://extgit.iaik.tugraz.at/krypto/nldtool/blob/master/hash/#2}{\color{#1}\nolinkurl{#3}}}
+\newcommand{\hashmiss}[2][todo]{\textcolor{#1}{#2}}
+
+\setcounter{secnumdepth}{1}
+
+\begin{document}
+
+%\tableofcontents
+
+%\section{Search Tool}
+%
+%\begin{itemize}
+%  \item \fullcite{fseEichlsederMS14}
+%  \item \fullcite{sacryptDobraunigMS14}
+%  \item \fullcite{wccEichlsederMNRS13}
+%  \item \fullcite{eurocryptMendelNS13}
+%  \item \fullcite{asiacryptMendelNS11}
+%\end{itemize}
+
+%\section{Applications}
+
+\subsection{CAESAR Candidates (CD)}
+
+\begin{itemize}
+  \item \fullcite{ctrsaDobraunigEMS15}
+    \begin{itemize}
+      \item \hashlink[done]{ascon/ctrsaDobraunigEMS15/3r_char.xml}
+      \item \hashlink[done]{ascon/ctrsaDobraunigEMS15/4r_char.xml}
+      \item \hashlink[done]{ascon/ctrsaDobraunigEMS15/forgery_3r_char.xml}
+      \item \hashlink[done]{ascon/ctrsaDobraunigEMS15/forgery_4r_char.xmll}
+    \end{itemize}
+  \item \fullcite{sacryptDobraunigEM15}
+    \begin{itemize}
+      \item \hashlink[done]{icepole/sacDobraunigEM15/forgery-3-rounds-result.xml}
+      \item \hashlink[done]{icepole/sacDobraunigEM15/forgery-4-rounds-result.xml}
+      \item \hashlink[done]{icepole/sacDobraunigEM15/permutation-5-rounds-result.xml}
+      \item \hashlink[done]{icepole/sacDobraunigEM15/permutation-6-rounds-result.xml}
+    \end{itemize}
+  \item \textbf{Ketje}:
+    \begin{itemize}
+      \item \hashlink[todo]{ketje/chars/test.xml}
+      \item \hashlink[todo]{ketje/chars/test2.xml}
+    \end{itemize}
+\end{itemize}
+
+\subsection{SHA-3 (FM)}
+
+\begin{itemize}
+  \item \fullcite{imaKolblMNS13}
+    \begin{itemize}
+      \item \hashlink[todo]{keccak/imaKolblMNS13/r4_w32_n384.xml}
+      \item \hashlink[todo]{keccak/imaKolblMNS13/r4_w64_n256.xml}
+      \item \hashlink[todo]{keccak/imaKolblMNS13/r4_w64_n512.xml}
+    \end{itemize}
+\end{itemize}
+
+\subsection{SHA-3 Candidates (FM)}
+
+\begin{itemize}
+  \item \textbf{Skein}: UPDATE DESCRIPTION, \dots
+    \begin{itemize}
+      \item \hashlink[todo]{skein/chars/16bit_input_short.txt}
+      \item \hashlink[todo]{skein/chars/wang_32step_nc.txt}
+      \item \hashlink[todo]{skein/chars/32bit_input_short.txt}
+      \item \hashlink[todo]{skein/chars/32bit_input.txt}
+      \item \hashlink[todo]{skein/chars/32bit48found.txt}
+    \end{itemize}
+  \item \textbf{Blake}: LOESCHEN
+\end{itemize}
+
+\subsection{SHA-2}
+
+\begin{itemize}
+  \item \fullcite{asiacryptDobraunigEM15}
+
+    28-round collisions for SHA-224:
+    \begin{itemize}
+      \item \hashlink[done]{sha2/asiacryptDobraunigEM15/28_224_coll_char.xml}
+          / \hashshrt[done]{sha2/asiacryptDobraunigEM15/28_224_coll_msg.xml}{msg.xml}
+    \end{itemize}
+
+    Free-start collision for SHA-224 based on 38-round semi-free-start collision:
+    \begin{itemize}
+      \item \hashlink[done]{sha2/asiacryptDobraunigEM15/39_224_free_char.xml}
+          / \hashshrt[done]{sha2/asiacryptDobraunigEM15/39_224_free_msg.xml}{msg.xml}
+    \end{itemize}
+
+    27-round collisions for SHA-512/$t$:
+    \begin{itemize}
+      \item \hashlink[done]{sha2/asiacryptDobraunigEM15/27_512-224_coll_char.xml}
+          / \hashshrt[done]{sha2/asiacryptDobraunigEM15/27_512-224_coll_msg.xml}{msg.xml}
+      \item \hashlink[done]{sha2/asiacryptDobraunigEM15/27_512-256_coll_char.xml}
+          / \hashshrt[done]{sha2/asiacryptDobraunigEM15/27_512-256_coll_msg.xml}{msg.xml}
+      \item \hashlink[done]{sha2/asiacryptDobraunigEM15/27_384_coll_start.xml}
+          / \hashshrt[done]{sha2/asiacryptDobraunigEM15/27_384_coll_char.xml}{char.xml}
+          / \hashshrt[done]{sha2/asiacryptDobraunigEM15/27_384_coll_msg.xml}{msg.xml}
+      \item \hashlink[done]{sha2/asiacryptDobraunigEM15/27_512_coll_start.xml}
+          / \hashshrt[done]{sha2/asiacryptDobraunigEM15/27_512_coll_msg.xml}{msg.xml}
+    \end{itemize}
+
+    Free-start collisions for SHA-512/$t$ based on 38-round semi-free-start collision (not in paper):
+    \begin{itemize}
+      \item \hashlink[done]{sha2/asiacryptDobraunigEM15/40_384_free_char.xml}
+          / \hashshrt[done]{sha2/asiacryptDobraunigEM15/40_384_free_msg.xml}{msg.xml}
+      \item \hashlink[done]{sha2/asiacryptDobraunigEM15/42_512-256_free_char.xml}
+          / \hashshrt[done]{sha2/asiacryptDobraunigEM15/42_512-256_free_msg.xml}{msg.xml}
+      \item \hashlink[done]{sha2/asiacryptDobraunigEM15/43_512-224_free_char.xml}
+          / \hashshrt[done]{sha2/asiacryptDobraunigEM15/43_512-224_free_msg.xml}{msg.xml}
+    \end{itemize}
+
+    Free-start collisions for SHA-512/$t$ based on 39-round semi-free-start collision:
+    \begin{itemize}
+      \item \hashlink[done]{sha2/asiacryptDobraunigEM15/39_512_semi_start.xml}
+          / \hashshrt[done]{sha2/asiacryptDobraunigEM15/39_512_semi_char.xml}{char.xml}
+          / \hashshrt[done]{sha2/asiacryptDobraunigEM15/39_512_semi_msg.xml}{msg.xml}
+      \item \hashlink[done]{sha2/asiacryptDobraunigEM15/41_384_free_msg.xml}
+      \item \hashlink[done]{sha2/asiacryptDobraunigEM15/43_512-256_free_msg.xml}
+      \item \hashlink[done]{sha2/asiacryptDobraunigEM15/44_512-224_free_msg.xml}
+    \end{itemize}
+
+  \item \fullcite{fseEichlsederMS14}
+
+    38-round semi-free-start-collision for SHA-512:
+    \begin{itemize}
+      \item \hashlink[done]{sha2/fseEichlsederMS14/38_512_semi_start.xml}
+          / \hashshrt[done]{sha2/fseEichlsederMS14/38_512_semi_char.xml}{char.xml}
+          / \hashshrt[done]{sha2/fseEichlsederMS14/38_512_semi_msg.xml}{msg.xml}
+    \end{itemize}
+
+  \item \fullcite{eurocryptMendelNS13}
+
+    28-round collision, 31-round 2-block collision, and 38-round semi-free-start
+    collision for SHA-256:
+    \begin{itemize}
+      \item \hashlink[done]{sha2/eurocryptMendelNS13/28_256_coll_start_alt.xml}
+          / \hashshrt[done]{sha2/eurocryptMendelNS13/28_256_coll_start.xml}{start.xml}
+          / \hashshrt[done]{sha2/eurocryptMendelNS13/28_256_coll_char.xml}{char.xml}
+          / \hashshrt[done]{sha2/eurocryptMendelNS13/28_256_coll_msg.xml}{msg.xml}
+      \item \hashlink[done]{sha2/eurocryptMendelNS13/31_256_coll_2block_char.xml}
+          / \hashshrt[done]{sha2/eurocryptMendelNS13/31_256_coll_2block_msg.xml}{msg.xml}
+      \item \hashlink[done]{sha2/eurocryptMendelNS13/38_256_semi_start.xml}
+          / \hashshrt[done]{sha2/eurocryptMendelNS13/38_256_semi_char.xml}{char.xml}
+          / \hashshrt[done]{sha2/eurocryptMendelNS13/38_256_semi_msg.xml}{msg.xml}
+    \end{itemize}
+
+  \item \fullcite{asiacryptMendelNS11}
+
+    27-round collision and 32-round semi-free-start collision for SHA-256:
+    \begin{itemize}
+      \item \hashlink[done]{sha2/asiacryptMendelNS11/27_256_coll_start.xml}
+      \item \hashlink[done]{sha2/asiacryptMendelNS11/32_256_semi_start.xml}
+          / \hashshrt[done]{sha2/asiacryptMendelNS11/32_256_semi_char.xml}{char.xml}
+          / \hashshrt[done]{sha2/asiacryptMendelNS11/32_256_semi_msg.xml}{msg.xml}
+    \end{itemize}
+
+  \item Challenges:
+    \begin{itemize}
+      \item \hashlink[done]{sha2/chars/draft_28_512_coll_start.xml}
+      \item \hashlink[done]{sha2/chars/draft_39_256_semi_start1.xml}
+      \item \hashlink[done]{sha2/chars/draft_39_256_semi_start2.xml}
+    \end{itemize}
+\end{itemize}
+
+\subsection{SHA-1 (ME, FM)}
+
+\begin{itemize}
+  \item \fullcite{sacryptAlbertiniAEMS14}
+    \begin{itemize}
+      \item \hashlink[todo]{sha1/sacryptAlbertiniAEMS14/malicious_collision.xml}: 
+      \item \hashlink[todo]{sha1/sacryptAlbertiniAEMS14/com-1.xml}: 
+      \item \hashlink[todo]{sha1/sacryptAlbertiniAEMS14/com-2.xml}: 
+      \item \hashlink[todo]{sha1/sacryptAlbertiniAEMS14/com-3.xml}: 
+      \item \hashlink[todo]{sha1/sacryptAlbertiniAEMS14/eve-1.xml}: 
+      \item \hashlink[todo]{sha1/sacryptAlbertiniAEMS14/eve-2.xml}: 
+      \item \hashlink[todo]{sha1/sacryptAlbertiniAEMS14/eve-3.xml}: 
+      \item \hashlink[todo]{sha1/sacryptAlbertiniAEMS14/pe-1.xml}: 
+      \item \hashlink[todo]{sha1/sacryptAlbertiniAEMS14/pe-2.xml}: 
+      \item \hashlink[todo]{sha1/sacryptAlbertiniAEMS14/pe-3.xml}: 
+      \item \hashlink[todo]{sha1/sacryptAlbertiniAEMS14/pe-4.xml}: 
+      \item \hashlink[todo]{sha1/sacryptAlbertiniAEMS14/pe-result.xml}: 
+      \item \hashlink[todo]{sha1/sacryptAlbertiniAEMS14/pe-w.xml}: 
+      \item \dots final results are missing
+    \end{itemize}
+  \item Misc:
+    \begin{itemize}
+      \item \hashlink[todo]{sha1/asiacryptCanniereR06/64-firstblock.xml} (improve search!)
+      \item \hashlink[todo]{sha1/sacryptCanniereMR07/70-firstblock.xml} (improve search!)
+      \item \hashlink[todo]{sha1/cryptoWangYY05a/80-firstblock.xml} (improve search!)
+      \item \hashlink[todo]{sha1/eurocryptStevens13/80-firstblock.xml} (improve search!)
+
+    \end{itemize}
+\end{itemize}
+
+\subsection{RIPEMD-128/160 (FM)}
+
+\begin{itemize}
+  \item \fullcite{asiacryptMendelPSWW13}
+    \begin{itemize}
+      \item \hashlink[todo]{ripemd160/asiacryptMendelPSWW13/12mess_seq.txt}
+      \item \hashlink[todo]{ripemd160/asiacryptMendelPSWW13/36_r1.txt}
+      \item \hashlink[todo]{ripemd160/asiacryptMendelPSWW13/36_r2.txt}
+      \item \hashlink[todo]{ripemd160/asiacryptMendelPSWW13/M14.txt}
+      \item \hashlink[todo]{ripemd160/asiacryptMendelPSWW13/test_r2.txt}
+      \item \hashlink[todo]{ripemd160/asiacryptMendelPSWW13/test.txt}
+      \item \hashlink[todo]{ripemd160/asiacryptMendelPSWW13/w14.xml}
+      \item \hashlink[todo]{ripemd160/asiacryptMendelPSWW13/FullPath_M0.xml}
+      \item \hashlink[todo]{ripemd160/asiacryptMendelPSWW13/w14a-char.xml}
+      \item \hashlink[todo]{ripemd160/asiacryptMendelPSWW13/w14a-msg.txt}
+      \item \hashlink[todo]{ripemd160/asiacryptMendelPSWW13/w14-char.txt}
+      \item \hashlink[todo]{ripemd160/asiacryptMendelPSWW13/w14-msg.txt}
+    \end{itemize}
+  \item \fullcite{iswMendelNSS12}
+    \begin{itemize}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/14L_13free.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/14L_49free.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/32-4_right2_sub.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/32-4_right2.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/38.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/3mess_2.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/3mess_test1.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/3mess_test2.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/3mess_test3new.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/3mess_test3.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/3mess_test4.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/3mess_test5.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/3mess_test6.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/3mess_test7.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/3mess_test.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/42both_sub.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/42both.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/42-mm.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/42Rtest.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/49both_sub.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/49both.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/msg-16-52.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/msg-16-60.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/msg-16-62.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/msg-16-64all.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/msg-16-64.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/r1-m7.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/r2-char.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/r2m3_1.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/test08r2-1.txt}
+      \item \hashlink[todo]{ripemd160/iswMendelNSS12/test08r2.txt}
+    \end{itemize}
+  \item \fullcite{fseMendelNS12}
+    \begin{itemize}
+      \item \hashlink[todo]{ripemd128/fseMendelNS12/38-coll-start.xml}
+      \item \hashlink[todo]{ripemd128/fseMendelNS12/38-coll-char.xml}
+      \item \hashlink[todo]{ripemd128/fseMendelNS12/38-coll-msg.xml}
+      \item \hashlink[todo]{ripemd128/fseMendelNS12/44-nearcoll-msg.xml}
+      \item \hashlink[todo]{ripemd128/fseMendelNS12/48-free-start.xml} (todo, deef-forward?)
+      \item \hashlink[todo]{ripemd128/fseMendelNS12/48-free-char.xml}
+      \item \hashlink[todo]{ripemd128/fseMendelNS12/48-free-msg.xml}
+      \item \hashlink[todo]{ripemd128/fseMendelNS12/42.txt}
+      \item \hashlink[todo]{ripemd128/fseMendelNS12/38-1.txt}
+      \item \hashlink[todo]{ripemd128/fseMendelNS12/38-2.txt}
+      \item \hashlink[todo]{ripemd128/fseMendelNS12/38a-found1.txt}
+      \item \hashlink[todo]{ripemd128/fseMendelNS12/42-path.txt}
+      \item \hashlink[todo]{ripemd128/fseMendelNS12/42.txt}
+      \item \hashlink[todo]{ripemd128/fseMendelNS12/44nc+padding-path.txt}
+     \end{itemize}
+
+\subsection{SM3 (FM)}
+
+\begin{itemize}
+  \item \fullcite{ctrsaMendelNS13}
+    \begin{itemize}
+      \item \hashlink[todo]{sm3/ctrsaMendelNS13/20-start.xml} 
+      \item \hashlink[todo]{sm3/ctrsaMendelNS13/20-char.xml}
+      \item \hashlink[todo]{sm3/ctrsaMendelNS13/20-msg.xml} (collision does not match paper!)
+      \item \hashlink[todo]{sm3/ctrsaMendelNS13/24-start.xml}
+      \item \hashlink[todo]{sm3/ctrsaMendelNS13/24-char.xml} 
+      \item \hashlink[done]{sm3/ctrsaMendelNS13/24-msg.xml} 
+    \end{itemize}
+\end{itemize}
+
+\subsection{HAS-160 (FM)}
+
+\begin{itemize}
+  \item \fullcite{iciscMendelNS11}
+    \begin{itemize}
+      \item \hashlink[todo]{has160/iciscMendelNS11/65-start.xml}
+      \item \hashlink[todo]{has160/iciscMendelNS11/65-char.xml}
+      \item \hashlink[todo]{has160/iciscMendelNS11/65-msg.xml} (todo)
+      \item add testvectors
+    \end{itemize}
+\end{itemize}
+
+\subsection{SipHash (CD)}
+
+\begin{itemize}
+  \item \fullcite{sacryptDobraunigMS14}
+    \begin{itemize}
+      \item \hashlink[done]{siphash/sacDobraunigMS14/internal_collision_SipHash-1-x_char.xml}
+      \item \hashlink[done]{siphash/sacDobraunigMS14/internal_collision_SipHash-2-x_char.xml}
+      \item \hashlink[done]{siphash/sacDobraunigMS14/internal_collision_SipHash-1-x_msg.xml}
+      \item \hashlink[done]{siphash/sacDobraunigMS14/internal_collision_SipHash-2-x_msg.xml}
+    \end{itemize}
+\end{itemize}
+
+%\section{Unpublished}
+\subsection{Misc}
+
+\begin{itemize}
+  \item DHA-256 -- remove?
+%   \item Hamsi
+  \item MD4 (might need to adapt wiki!)
+    \begin{itemize}
+      \item \hashlink[todo]{md4/eurocryptWangLFCY05/start.xml}
+      \item \hashlink[todo]{md4/fseSasakiWOK07/start.xml}
+      \item \hashlink[todo]{md4/chars/md4_basic.xml}
+      \item \hashlink[todo]{md4/chars/md4_empty.xml}
+    \end{itemize}
+  \item MD5
+    \begin{itemize}
+      \item \hashlink[todo]{md5/eurocryptWangY05/start.xml} (improve search!)
+      \item \hashlink[todo]{md5/eurocryptWangY05/start.xml} (improve search!)
+    \end{itemize}
+%   \item Pride -- remove?
+%   \item Prost -- remove?
+  \item Salsa
+    \begin{itemize}
+      \item \hashlink[todo]{salsa/chars/diff.xml}
+      \item \hashlink[todo]{salsa/chars/test.xml}
+    \end{itemize}
+%   \item Simon \& Speck
+%     \begin{itemize}
+%       \item \hashlink[todo]{simon/chars/startchars/simon32_64_12round_diff_biryukov_search.xml}
+%       \item \hashlink[todo]{simon/chars/startchars/simon32_64_13round_diff_biryukov.xml}
+%       \item \hashlink[todo]{simon/chars/startchars/simon32_64_13round_diff_abed_search.xml}
+%       \item \hashlink[todo]{simon/chars/startchars/simon32_64_13round_diff_abed.xml}
+%       \item \hashlink[todo]{simon/chars/startchars/simon32_64_13round_diff_biryukov_search.xml}
+%       \item \hashlink[todo]{simon/chars/startchars/simon32_64_12round_diff_biryukov.xml}
+%       \item \hashlink[todo]{simon/chars/startchars/simon32_64_12round_diff_alkhzaimi.xml}
+%       \item \hashlink[todo]{simon/chars/testchars/simon32_64_impossible_diff_14_rounds.xml}
+%       \item \hashlink[todo]{simon/chars/testchars/simon32_64_impossible_diff_10_rounds.xml}
+%       \item \hashlink[todo]{simon/chars/testchars/simon32_64_impossible_diff_12_rounds.xml}
+%       \item \hashlink[todo]{speck/chars/startchars/speck32_64_9round_diff_abed_search.xml}
+%       \item \hashlink[todo]{speck/chars/startchars/speck32_64_9round_diff_abed.xml}
+%       \item \hashlink[todo]{speck/chars/startchars/speck32_64_9round_diff_biryukov.xml}
+%       \item \hashlink[todo]{speck/chars/startchars/speck32_64_9round_diff_biryukov_search.xml}
+%       \item \hashlink[todo]{speck/chars/startchars/speck32_64_8round_diff_abed.xml}
+%     \end{itemize}
+\end{itemize}
+
+
+%\section{Related Work}
+
+%SHA-1 Tool:
+%Christophe De Cannière, Christian Rechberger: Finding SHA-1 Characteristics: General Results and Applications. ASIACRYPT 2006 http://dx.doi.org/10.1007/11935230_1
+%Christophe De Cannière, Florian Mendel, Christian Rechberger: Collisions for 70-Step SHA-1: On the Full Cost of Collision Search. SAC 2007 http://dx.doi.org/10.1007/978-3-540-77360-3_4
+%ARX-Tools:
+%Gaëtan Leurent: Analysis of Differential Attacks in ARX Constructions. ASIACRYPT 2012 http://dx.doi.org/10.1007/978-3-642-34961-4_15
+%Gaëtan Leurent: Construction of Differential Characteristics in ARX Designs Application to Skein. CRYPTO 2013 http://dx.doi.org/10.1007/978-3-642-40041-4_14
+%Probability Computation:
+%Nicky Mouha, Vesselin Velichkov, Christophe De Cannière, Bart Preneel: The Differential Analysis of S-Functions. SAC 2010 http://dx.doi.org/10.1007/978-3-642-19574-7_3
+%Vesselin Velichkov, Nicky Mouha, Christophe De Cannière, Bart Preneel: The Additive Differential Probability of ARX. FSE 2011 http://dx.doi.org/10.1007/978-3-642-21702-9_20
+
+% BIBLIOGRAPHY {{{
+\begin{filecontents*}{\jobname.bib}
+@inproceedings{asiacryptDobraunigEM15,
+  author    = {Christoph Dobraunig and
+               Maria Eichlseder and
+               Florian Mendel},
+  editor    = {Tetsu Iwata and
+               Jung Hee Cheon},
+  title     = {Analysis of {SHA-512/224} and {SHA-512/256}},
+  booktitle = {Advances in Cryptology -- {ASIACRYPT} 2015},
+  series    = {LNCS},
+  volume    = {9453},
+  pages     = {612--630},
+  publisher = {Springer},
+  year      = {2015},
+  doi       = {10.1007/978-3-662-48800-3_25},
+  eprint    = {2016/374},
+}
+
+@inproceedings{ctrsaDobraunigEMS15,
+  author    = {Christoph Dobraunig and
+               Maria Eichlseder and
+               Florian Mendel and
+               Martin Schl{\"{a}}ffer},
+  editor    = {Kaisa Nyberg},
+  title     = {Cryptanalysis of Ascon},
+  booktitle = {Topics in Cryptology -- {CT-RSA} 2015},
+  series    = {LNCS},
+  volume    = {9048},
+  pages     = {371--387},
+  publisher = {Springer},
+  year      = {2015},
+  doi       = {10.1007/978-3-319-16715-2_20},
+  eprint    = {2015/30},
+}
+
+@inproceedings{sacryptDobraunigEM15,
+  author    = {Christoph Dobraunig and
+               Maria Eichlseder and
+               Florian Mendel},
+  editor    = {Orr Dunkelman and
+               Liam Keliher},
+  title     = {Forgery Attacks on Round-Reduced {ICEPOLE-128}},
+  booktitle = {Selected Areas in Cryptography -- {SAC} 2015},
+  series    = {LNCS},
+  volume    = {9566},
+  pages     = {479--492},
+  publisher = {Springer},
+  year      = {2015},
+  doi       = {10.1007/978-3-319-31301-6_27},
+  eprint    = {2015/392},
+}
+
+@inproceedings{fseEichlsederMS14,
+  author    = {Maria Eichlseder and
+               Florian Mendel and
+               Martin Schl{\"{a}}ffer},
+  editor    = {Carlos Cid and
+               Christian Rechberger},
+  title     = {Branching Heuristics in Differential Collision Search with Applications
+               to {SHA-512}},
+  booktitle = {Fast Software Encryption -- {FSE} 2014},
+  series    = {LNCS},
+  volume    = {8540},
+  pages     = {473--488},
+  publisher = {Springer},
+  year      = {2014},
+  doi       = {10.1007/978-3-662-46706-0_24},
+  eprint    = {2014/302},
+}
+
+@inproceedings{sacryptAlbertiniAEMS14,
+  author    = {Ange Albertini and
+               Jean-Philippe Aumasson and
+               Maria Eichlseder and
+               Florian Mendel and
+               Martin Schl{\"{a}}ffer},
+  editor    = {Antoine Joux and
+               Amr M. Youssef},
+  title     = {Malicious Hashing: {Eve}'s Variant of {SHA-1}},
+  booktitle = {Selected Areas in Cryptography -- {SAC} 2014},
+  series    = {LNCS},
+  volume    = {8781},
+  pages     = {1--19},
+  publisher = {Springer},
+  year      = {2014},
+  doi       = {10.1007/978-3-319-13051-4_1},
+  eprint    = {2014/694},
+}
+
+@inproceedings{sacryptDobraunigMS14,
+  author    = {Christoph Dobraunig and
+               Florian Mendel and
+               Martin Schl{\"{a}}ffer},
+  editor    = {Antoine Joux and
+               Amr M. Youssef},
+  title     = {Differential Cryptanalysis of {SipHash}},
+  booktitle = {Selected Areas in Cryptography -- {SAC} 2014},
+  series    = {LNCS},
+  volume    = {8781},
+  pages     = {165--182},
+  publisher = {Springer},
+  year      = {2014},
+  doi       = {10.1007/978-3-319-13051-4_10},
+  eprint    = {2014/722},
+}
+
+@inproceedings{asiacryptMendelPSWW13,
+  author    = {Florian Mendel and
+               Thomas Peyrin and
+               Martin Schl{\"{a}}ffer and
+               Lei Wang and
+               Shuang Wu},
+  editor    = {Kazue Sako and
+               Palash Sarkar},
+  title     = {Improved Cryptanalysis of Reduced {RIPEMD-160}},
+  booktitle = {Advances in Cryptology -- {ASIACRYPT} 2013},
+  series    = {LNCS},
+  volume    = {8270},
+  pages     = {484--503},
+  publisher = {Springer},
+  year      = {2013},
+  doi       = {10.1007/978-3-642-42045-0_25},
+  eprint    = {2013/600},
+}
+
+@inproceedings{ctrsaMendelNS13,
+  author    = {Florian Mendel and
+               Tomislav Nad and
+               Martin Schl{\"{a}}ffer},
+  editor    = {Ed Dawson},
+  title     = {Finding Collisions for Round-Reduced {SM3}},
+  booktitle = {Topics in Cryptology -- {CT-RSA} 2013},
+  series    = {LNCS},
+  volume    = {7779},
+  pages     = {174--188},
+  publisher = {Springer},
+  year      = {2013},
+  doi       = {10.1007/978-3-642-36095-4_12},
+}
+
+@inproceedings{eurocryptMendelNS13,
+  author    = {Florian Mendel and
+               Tomislav Nad and
+               Martin Schl{\"{a}}ffer},
+  editor    = {Thomas Johansson and
+               Phong Q. Nguyen},
+  title     = {Improving Local Collisions: New Attacks on Reduced {SHA-256}},
+  booktitle = {Advances in Cryptology -- {EUROCRYPT} 2013},
+  series    = {LNCS},
+  volume    = {7881},
+  pages     = {262--278},
+  publisher = {Springer},
+  year      = {2013},
+  doi       = {10.1007/978-3-642-38348-9_16},
+  eprint    = {2015/350},
+}
+
+@inproceedings{imaKolblMNS13,
+  author    = {Stefan K{\"{o}}lbl and
+               Florian Mendel and
+               Tomislav Nad and
+               Martin Schl{\"{a}}ffer},
+  editor    = {Martijn Stam},
+  title     = {Differential Cryptanalysis of {Keccak} Variants},
+  booktitle = {Cryptography and Coding -- {IMACC} 2013},
+  series    = {LNCS},
+  volume    = {8308},
+  pages     = {141--157},
+  publisher = {Springer},
+  year      = {2013},
+  doi       = {10.1007/978-3-642-45239-0_9},
+}
+
+@inproceedings{wccEichlsederMNRS13,
+  author       = {Maria Eichlseder and
+                  Florian Mendel and
+                  Tomislav Nad and
+                  Vincent Rijmen and
+                  Martin Schl{\"{a}}ffer},
+  title        = {Linear Propagation in Efficient Guess-and-Determine Attacks},
+  editor       = {Lilya Budaghyan and
+                  Tor Helleseth and
+                  Matthew G. Parker},
+  booktitle    = {International Workshop on Coding and Cryptography -- WCC 2013, Preproceedings},
+  pages        = {193--202},
+  year         = {2013},
+  url          = {http://www.selmer.uib.no/WCC2013/pdfs/Eichlseder.pdf},
+  isbn         = {978-82-308-2269-2},
+}
+
+@inproceedings{fseMendelNS12,
+  author    = {Florian Mendel and
+               Tomislav Nad and
+               Martin Schl{\"{a}}ffer},
+  editor    = {Anne Canteaut},
+  title     = {Collision Attacks on the Reduced Dual-Stream Hash Function {RIPEMD-128}},
+  booktitle = {Fast Software Encryption -- {FSE} 2012},
+  series    = {LNCS},
+  volume    = {7549},
+  pages     = {226--243},
+  publisher = {Springer},
+  year      = {2012},
+  doi       = {10.1007/978-3-642-34047-5_14},
+}
+
+@inproceedings{iswMendelNSS12,
+  author    = {Florian Mendel and
+               Tomislav Nad and
+               Stefan Scherz and
+               Martin Schl{\"{a}}ffer},
+  editor    = {Dieter Gollmann and
+               Felix C. Freiling},
+  title     = {Differential Attacks on Reduced {RIPEMD-160}},
+  booktitle = {Information Security -- {ISC} 2012},
+  series    = {LNCS},
+  volume    = {7483},
+  pages     = {23--38},
+  publisher = {Springer},
+  year      = {2012},
+  doi       = {10.1007/978-3-642-33383-5_2},
+}
+
+@inproceedings{asiacryptMendelNS11,
+  author    = {Florian Mendel and
+               Tomislav Nad and
+               Martin Schl{\"{a}}ffer},
+  editor    = {Dong Hoon Lee and
+               Xiaoyun Wang},
+  title     = {Finding {SHA-2} Characteristics: Searching through a Minefield of
+               Contradictions},
+  booktitle = {Advances in Cryptology -- {ASIACRYPT} 2011},
+  series    = {LNCS},
+  volume    = {7073},
+  pages     = {288--307},
+  publisher = {Springer},
+  year      = {2011},
+  doi       = {10.1007/978-3-642-25385-0_16},
+}
+
+@inproceedings{iciscMendelNS11,
+  author    = {Florian Mendel and
+               Tomislav Nad and
+               Martin Schl{\"{a}}ffer},
+  editor    = {Howon Kim},
+  title     = {Cryptanalysis of Round-Reduced {HAS-160}},
+  booktitle = {Information Security and Cryptology -- {ICISC} 2011},
+  series    = {LNCS},
+  volume    = {7259},
+  pages     = {33--47},
+  publisher = {Springer},
+  year      = {2011},
+  doi       = {10.1007/978-3-642-31912-9_3},
+}
+\end{filecontents*}
+%}}}
+
+\end{document}

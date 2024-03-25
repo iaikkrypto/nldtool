@@ -1,0 +1,78 @@
+<config>
+<options>
+  <option name="f" value="sha2"/>
+  <option name="sha2-lin" value="1"/>
+  <option name="n" value="64"/>
+  <option name="w" value="32"/>
+</options>
+<char value="
+ -4 A: 01nn0n11100uun1n1un000n0nuunu100 E: 0unnn1un1un01un10001n1u11n11u10n                                    
+ -3 A: 0u00u1u0011nu10001nu11001u001u01 E: 00n110u1uu111110u0010n0u1uun000u                                    
+ -2 A: 0n010nnunn0u0un1n1001u1uu0n11nuu E: 011nuuun0n1n1u1000n1n1u1nn0nu100                                    
+ -1 A: 0nu1n10u1uuu10101100nnu1u10u0010 E: 0110101u0nu1110n0uunnnu00u00unu0                                    
+  0 A: nnn0nu0101100uuunn1n0u0010nn0u0n E: u011un10u0100u0u0n1u1u0unnu0n00n W: 0uuunnu1uu11nn11uuun1110u0n0n11u
+  1 A: 010u00n101100u0uu0n011unn0u110nn E: u1nunnn0n11n11u0u01u000101100110 W: 00nunn10nn1u1n1u000n110n0nnnuun1
+  2 A: u00nu00u1011101000u0nn0ununuuuu1 E: 1nnu0001u1n0nu00u110n0nn1nn000uu W: 0n1n000n11n0u001n000n11nnuu0101n
+  3 A: 1000nn0n0111u0110u1nn01nunn1nnn1 E: 1nu1n1nn1uuunuu1010nnuununun011u W: 011unnuun101u11unnn1u1n0uu1nuuu0
+  4 A: 0n1uu0nu1uuuu1u0n00n0u101u0n0100 E: 0nun01n0uunu0n01n11n101uu0u10nn1 W: 0n10unnunn0uun11n1nn010111000uu1
+  5 A: nn10u011001uunnun1unun10n00uuuu0 E: n0uu0n1nnu0u11uunuuunuu0u1011011 W: 0n1n01101un00n1001n1unuuunn1unnn
+  6 A: 1unu000n0un1ununu1nu1nu1100nnu01 E: 1u110nn100nn0nu000n11uu0nuuunn00 W: 00nn0uunn01uuu01u1n1unu11n0n1n01
+  7 A: 0uunun0u10nu11nn1n01unn10n00u101 E: 11101101n100nuuuu000u1n11n10nunn W: 010nunu10n0nuu1u11u11u011nn0nu00
+  8 A: 11u0000000nnuu1u1n1uu1u11n0101u0 E: u10u000nu0nnuu0nun0n1unnn1n01un0 W: 0nun00nu101nuu0nu0n011nn00nu0n1u
+  9 A: nuu11unu0n01n1nun010u01n00u110nu E: 0un01u0uuuu0n1n1nun001nn1n1uu01n W: 0nn00nn0nn1n0unnnu1n0unn1unn010n
+ 10 A: 1000nnn1u000nun1unuu0n11un11u10u E: 1n0n1u1nu0n1uun010nn110n0101nn1n W: 001uu0u1101n1n11n0nn1n101uu10u11
+ 11 A: 1uu11u1101n0nu00n1u001n0uu0100u0 E: 1nn1uu00100u0u1uu01n101u010uu110 W: 0n000un1uu110u0un111u0nuuu100u01
+ 12 A: nn1nu10n0nu010uu11nu11un11u11nn1 E: unn001u0n110n0n0u1nu001n111nu100 W: 00uuun1010n1u1n011uu10n1u000u1un
+ 13 A: 0uuun1n101111n01u1uu1uunn1u1n0nu E: 0nu1n0nuu1n1n000u011u11unu1nn0n1 W: 01uuu001011u10un1unun1uun0000000
+ 14 A: 01un11n0010n1nnnnu0n0n10n000n0n0 E: 00un01u1nnu1nuu111u0n1nunu000u1n W: 0u101uu0n011n011nun00nu110100n00
+ 15 A: 0nnnuun0n000nn1n00n0nn1n01n0uunu E: 01u10u0011nnn01unnnunu010n11u0u1 W: 01n0u0100un0u111uunn00nu001u01n1
+ 16 A: 10n1u01n0n10un0101u0un00u11nn0n0 E: 0nn0nnnnunu0u0u10nuunn00uu10010u W: 0nn11nn10n111n0001nuu10nnu110n01
+ 17 A: uu101uu0u1u01101u1u0n1n0n0nu11uu E: 10nununn0nu1nn10unn10uu1001u0un1 W: u1uu10nn0un1nu1011u1nnn1u0n101n1
+ 18 A: 0nnu1uu0unu010u001nuuuu1unnnu101 E: un001u1uuuu10un0uu001uuu0u1nu101 W: 01u00nu00nun01unn01nn0u10uunuu1n
+ 19 A: 00n1uu1unn0u110uuun0uuu011uu0u01 E: 0uuu1n0u1nu1u0un0nnn1un1111010u0 W: u0un1u1nu1n0001u0nn0nn0uunn0u1u0
+ 20 A: 00nn0uunu1n0nn1010u01u01nn0nn001 E: 0nuuu010u1u01n0111unu0n0nn01010u W: n001u0unuu0nuu00n1nuu00nnn011n10
+ 21 A: uu01u0u01nu01u1uu1nu01u1n0nun1nn E: un0nu000000n0110010u0nu0n1u000nn W: 11n11n0uuu111un0nu0100u01uu110un
+ 22 A: n111u00uunn0n1nn101uuuuuuu10uuuu E: 01n0unnn0u001101uun11100un010uun W: u11un1un001nu10uunnnuun0011nuuuu
+ 23 A: 101n11u110n1un010011u101101n1010 E: 0unnnn0001nnunun11u011uu0uunnn10 W: nnnn1n00u1n01u101n1000u11n11u0u1
+ 24 A: 0nnu1u000u0nnuu1u10u0nu010un0unn E: 000n0unu001unu1u0nunn1101u01u0un W: nn1000u0u10nn000u10unn0nu01un0n0
+ 25 A: 0u1u1u1u1uu1uu1nuun0u1011100uu0u E: 10n0u11110unuu010u0u1u1001n011n1 W: n0nu0n1uu0u10011nu0u100010u0100u
+ 26 A: n11000u01un11un1000u1u1101nn0uun E: u10u000uu1nuu1101nn01000n0nn11uu W: 111u00nu100n00n010u101u0nu0n0n11
+ 27 A: u1u11nunn1u10n0nn100u11001uun01n E: nnnu0unn0n1u00nnn11n0nu11010n110 W: 0n00uu01n10n1u0nnu00nn0u1u0uuun1
+ 28 A: 0nnn0nnnnn010nu1001nnn11n10u01un E: 1n0u01010010u1001n0u10101nuu110u W: 0nn111nnunn0uun0111nnunnn11un1n1
+ 29 A: 1110nnnnuuu01unu1un0100n0nn111nn E: n0101n00nu100nnu11u1nu1n01nn0111 W: unuunu10nuuunnn01110u1n10nnnu101
+ 30 A: n11uu0u1n1nnunu1unu0n10n0nu11nnn E: n0101u0uunuuu01u0111n01nnnuu1u1n W: 11u1un01n1000101n0u0u0u1u0n0000n
+ 31 A: 1nnnn0u10n1u1100n000n0nu010010nn E: 00n0un111un1u1un11n111nn1u1nnn0n W: u1n011100nu00un0u10nn0nun010u010
+ 32 A: n1u1110u1uuun10n001u1n0uunn01nun E: u100nn00nn0010uuu0unnn0unn00u0u0 W: u11001100n0u1nn01uuun10uu00u11un
+ 33 A: u1n01un110u1unu11u10u101u1n1uuu1 E: u01n1111nu1n01nnuun01un0101uuuu1 W: nnu1unu0u0110u1n0u1un0nnnuun00n0
+ 34 A: 10u1nnuunnu10n1nun00000u0n10nu1u E: u1un11unun0uu010nnn10001uuuu0uu1 W: unnu11n0u001uu01u1nuuu0nun1u1111
+ 35 A: uu0nun01u1u111n1010n11u0u1nuun0n E: 00n11uuu1n010nn0uu1uu1u1unnn0n00 W: uu10001011u01un10011nn10unnu0100
+ 36 A: 1n10u000u0u01nunnnn0u0nuu0u1101u E: 1nu0u011nun1u1uu111u0u0uu11nu0uu W: 00u0000u01n11u1100u00u000unu0uun
+ 37 A: 1n011u1u1n1n000u1u00111nnu1n0000 E: u0u1001u110un0101nn0u00nu1u01nn0 W: 1011n1001n010n11uu1nun111uu1u1uu
+ 38 A: 11unu11n10u01un111nn11uun000nn01 E: 0u0nnunn0uu00001uu1101nnn100un00 W: nnn11n1n1uun0nunnu0uu01u111010n1
+ 39 A: nnun0001n10011001uu0n0u00111nn1u E: un0nunn000n0u0nnnuu000nu00nunuun W: uunnnu1uu10n0u100n1ununnunn000n1
+ 40 A: uuun0001n010n1u111u0nn0un011n010 E: u1u1n00uu1u0nnn0nn0u1u10nn0n11u0 W: 0u001nunun00nnn1ununnn01n001n0uu
+ 41 A: 0n1uun1100nnn01uuu1u01n001unu0n0 E: uu0n101u0001uun11nun0unnu0n11110 W: 0un000n1nu1unu10n1n010uuuu00nn1n
+ 42 A: 0u01n1unn001unnu00un1uu010n1uu10 E: un0nnnn1nu1nuuu0100un11un1n0n100 W: nu1nnu00u11nu01uun1n10nunnu1u01n
+ 43 A: n111n0uuun0uuun0nn111000101nnu01 E: 10011u0nn0n1nuun1nu10u0n10un10nn W: 11un1011u1u01nu001n1uu01u001uuuu
+ 44 A: 11nn1n0nununu0nun0nu0nn0100unu10 E: n1n0uu0110nnu00u10un1110n0n1nu10 W: u0u0100uun1n0u01un1nn110nunu11n1
+ 45 A: u11u11011nn1n0n11u01uunn0n0111n1 E: 0u010n1u0n0u1uunn0u11u0uu01n0n0n W: u0nn1010uu01n100010n11n01000101u
+ 46 A: 0uuu0u0n0uun0nnnnnn10n11101110uu E: u1110uu11uun0un00n1uu1n10u0n0un1 W: 10u00u00u1unu1001unn1010unu11110
+ 47 A: 11uu01u1n10000100n1101uu1unn1uu1 E: un1011nuunu10nn0n0nu0u0u100u0u1n W: 11un010100nn0un01u1u1010n0u11110
+ 48 A: 0u00111nuu1nnn1u0n1u010nu0un1n10 E: 11nunuunu101uu00n01nn1n1n1u00nun W: 01uu1u10uuu01u0010101n1101u1u01n
+ 49 A: 0n10u1u00n11uun01nn1unu11001u0u1 E: u111101un01un1000n1n1unun0nn0u0u W: u0011u0uu00nun01011n1uuuun1uu1u1
+ 50 A: nnu11001nn1unn11110uuu00u0nuu1uu E: 0101unn1u1u1u0n1011uu1nunnnu0u01 W: 1u00nn1nu0n10nu10u0n10unn1101n11
+ 51 A: 0u10un0u00100nnu0n111nnu1101n1n1 E: 0u0nu1000uu01n00unnu0010un1nu100 W: 1n00u0000nn111uun0nn1nun10uu0unn
+ 52 A: 10100001nnnu1unn0nuu10u1nu0nn101 E: 101u01101unnunnu1nnnn0uu0uu1u0n0 W: un0n1nu110000nnnn1u00uunn0uun1un
+ 53 A: 0uuunn01un00uunuun1u0u10011n10nn E: unuu01n000010nu00nn00u11nu11unun W: n0n0n1n10un00nuun101nnun11uu1101
+ 54 A: 10nn1u1u1u00u000uu01nnu11n110unu E: 1u0nu1nuuuuun1u00nu10100u1n1111n W: u10unuunn0uu1110n0nnnu01uun110n0
+ 55 A: 01nu0110u0011n0u00nu1u0nn00u11n1 E: nu0nnnn100n111nu0n00010u11u11n01 W: 01nu000ununu010100111n00un01u0n0
+ 56 A: 11u0nuu01nun1uunu0nu10u000nn0110 E: 0101u1110nn0nun0unuuu000nu111nnu W: u10nu00nuunn1n101un001001u01uu0u
+ 57 A: u100nn10101nn1011nununun10nn1uu1 E: 1n0110nuunuu011n0011u110nuu10n11 W: uu01n0n10110u1u1nu0n1n0ununn1010
+ 58 A: nu0111nu10u000nu00u0001u00n1u101 E: uuuu0u0n0011uuu10001uu00n01u111u W: uunuu1nuun011uuu1n00un01un1n1unu
+ 59 A: 1u1n1u11100n00uun1u0nuun10u0uuu1 E: 1nu1010n0uu01nnn0n001nnnnnnn010u W: 10nnu1n10n010nu1110nn0u1n000101u
+ 60 A: n101u100un11nu1nn101nn1u00u10uu1 E: 10u1nn001n11u1u0unu1nn0010u0nnn0 W: uu11un100nu0un1nu1un11uuu011n101
+ 61 A: 0100n1u11n0un00uun1u01000u0n110n E: n0010unnu0uu10nn010n11uu10nn1u1u W: 0101n11n0unu0u10n0uunnn0001u01uu
+ 62 A: un11u0u0111n1unu0u0nn10u01n1n101 E: 1101nn1110unn011un01000uuun0nn1u W: 10nn0n00001110nuuu1u1u0000110n1u
+ 63 A: 0u00nnnnnnun00unnu0nu01uu01n100u E: uu01111u11u0uunnu0001un0n0unuuuu W: n10uuu01uun101uunuun0u1u00nn1010
+   "/>
+</config>

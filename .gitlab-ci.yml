@@ -1,0 +1,213 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+  NLDTOOL_BUILD_TYPE: Release
+
+stages:
+  - build
+  - basic
+  - testvectors
+  - checkchars
+  - search
+
+# Configuration fragment that sets up the docker image and the runner tag.
+# Additionally the default build directory is created and used.
+.config_template: &runner_config
+  image: nioshd/ubuntu-cppdev:latest
+  tags:
+    - gitlabci
+  before_script:
+    - mkdir -p build
+    - cd build
+
+# Build the Release/Debug version of the nldtool.
+# Package the binary and ctest configuration as artifacts.
+build:
+  <<: *runner_config
+  stage: build
+  script:
+    - cmake -DCMAKE_BUILD_TYPE=$NLDTOOL_BUILD_TYPE -GNinja ..
+    - cmake --build . -- -j 1
+  artifacts:
+    paths:
+      - build/nldtool
+      - build/CTestTestfile.cmake
+
+# Test if the binary can be executed with the help argument.
+_help:
+  <<: *runner_config
+  stage: basic
+  script: ctest -R help
+
+# Run basic test examples.
+tests:
+  <<: *runner_config
+  stage: basic
+  script: ctest -R tests/testvectors
+
+# Test algorithms with ctest (check testvectors).
+ascon_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R ascon/testvectors
+
+dha256_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R dha256/testvectors
+
+has160_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R has160/testvectors
+
+icepole_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R icepole/testvectors
+
+keccak_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R keccak/testvectors
+
+ketje_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R ketje/testvectors
+
+md4_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R md4/testvectors
+
+md5_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R md5/testvectors
+
+ripemd128_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R ripemd128/testvectors
+
+ripemd160_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R ripemd160/testvectors
+
+salsa_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R salsa/testvectors
+
+sha1_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R sha1/testvectors
+
+sha2_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R sha2/testvectors
+
+siphash_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R siphash/testvectors
+
+skein_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R skein/testvectors
+
+sm3_testvectors:
+  <<: *runner_config
+  stage: testvectors
+  script: ctest -R sm3/testvectors
+
+# Test algorithms with ctest (check all chars except testvectors).
+ascon_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R ascon -E testvectors
+
+dha256_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R dha256 -E testvectors
+
+has160_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R has160 -E testvectors
+
+icepole_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R icepole -E testvectors
+
+keccak_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R keccak -E testvectors
+
+ketje_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R ketje -E testvectors
+
+md4_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R md4 -E testvectors
+
+md5_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R md5 -E testvectors
+
+ripemd128_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R ripemd128 -E testvectors
+
+ripemd160_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R ripemd160 -E testvectors
+
+salsa_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R salsa -E testvectors
+
+sha1_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R sha1 -E testvectors
+
+sha2_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R sha2 -E testvectors
+
+siphash_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R siphash -E testvectors
+
+skein_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R skein -E testvectors
+
+sm3_checkchars:
+  <<: *runner_config
+  stage: checkchars
+  script: ctest -R sm3 -E testvectors
+
+# Test algorithms with ctest (search chars).
+md4_search:
+  <<: *runner_config
+  stage: search
+  script: ctest -R md4_search

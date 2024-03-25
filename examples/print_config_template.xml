@@ -1,0 +1,11 @@
+<print_config>
+  <flags>
+    <flag name="main" value="1"/>
+    <flag name="sub" value="0"/>
+    <flag name="carry" value="0"/>
+    <flag name="color" value="1"/>
+    <flag name="twobit" value="0"/>
+    <flag name="probability" value="0"/>
+    <flag name="latex" value="0"/>
+  </flags>
+</print_config>

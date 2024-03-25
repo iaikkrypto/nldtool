@@ -1,0 +1,12 @@
+<config>
+  <options>
+    <option name="f"  value="xor2"/>
+    <option name="n"  value="1"/>
+    <option name="w"  value="3"/>
+  </options>
+  <char value="
+    A: --x
+    B: -xx
+    C: -x-
+    "/>
+</config>

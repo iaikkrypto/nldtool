@@ -1,0 +1,9 @@
+# Ignore automatically generated files (by cmake)
+examples/crypto_factory.cpp
+examples/crypto_options.cpp
+
+# Ignore local printconfig file
+print_config.xml
+
+# Ignore build directories
+*build*/
