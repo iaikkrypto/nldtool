@@ -2,7 +2,6 @@
 #define MD5_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 /*! \class Md5
  *  \brief Implementation of the MD5 crypto function.

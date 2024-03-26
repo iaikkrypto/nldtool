@@ -1,11 +1,9 @@
 #include "xml_config.h"
 
 #include <cstdarg>
-#include <limits>
 
 #include "crypto.h"
 #include "crypto_factory.h"
-#include "cxxopts.hpp"
 #include "logfile.h"
 #include "text_io_format.h"
 #include "tinyxml2.h"

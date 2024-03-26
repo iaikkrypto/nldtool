@@ -2,7 +2,6 @@
 #define ADD2_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 /*! \class add2
  *  \brief Implementation of Add2

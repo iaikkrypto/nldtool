@@ -2,7 +2,6 @@
 #define SALSA_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 /*! \class Salsa
  *  \brief Implementation of the Salsa20 stream cipher.

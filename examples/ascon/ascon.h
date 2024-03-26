@@ -2,7 +2,6 @@
 #define ASCON_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 /*! \class Ascon
  *  \brief Implementation of the Ascon authenticated encryption algorithm.

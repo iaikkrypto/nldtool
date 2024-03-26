@@ -2,7 +2,6 @@
 #define SHA2_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 /*! \class Sha2
  *  \brief Implementation of the family of SHA-2 crypto functions.

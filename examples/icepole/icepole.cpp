@@ -1,7 +1,5 @@
 #include "icepole/icepole.h"
 
-#include <limits>
-
 #include "bitslice_step.h"
 #include "functions.h"
 #include "linear_step.h"

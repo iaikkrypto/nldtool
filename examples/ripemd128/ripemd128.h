@@ -2,7 +2,6 @@
 #define RIPEMD128_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 class Ripemd128 : public Crypto {
  public:

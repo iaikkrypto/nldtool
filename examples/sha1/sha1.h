@@ -2,7 +2,6 @@
 #define SHA1_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 /*! \class Sha1
  *  \brief Implementation of the SHA-1 crypto function.

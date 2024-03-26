@@ -37,7 +37,6 @@ echo '#ifndef '${includeguard}'
 #define '${includeguard}'
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 /*! \class '${classname}'
  *  \brief Implementation of '${classname}'

@@ -2,7 +2,6 @@
 #define HAS160_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 #include "functions.h"
 
 class Has160 : public Crypto {

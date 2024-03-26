@@ -2,7 +2,6 @@
 #define SIPHASH_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 #define SIPHASH_MAXROUNDS 9
 #define SIPHASH_MAX_MSG_BLOCKS 32

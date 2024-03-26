@@ -2,7 +2,6 @@
 #define XOR2_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 /*! \class Xor2
  *  \brief Implementation of Xor2

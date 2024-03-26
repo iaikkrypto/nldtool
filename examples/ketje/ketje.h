@@ -2,7 +2,6 @@
 #define KETJE_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 class Characteristic;
 

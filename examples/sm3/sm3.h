@@ -2,7 +2,6 @@
 #define SM3SUB_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 class Sm3 : public Crypto {
  public:

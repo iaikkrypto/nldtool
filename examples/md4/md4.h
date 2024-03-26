@@ -2,7 +2,6 @@
 #define MD4_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 /*! \class Md4
  *  \brief Implementation of the MD4 crypto function.

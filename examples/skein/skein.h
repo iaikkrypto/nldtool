@@ -2,7 +2,6 @@
 #define SKEIN_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 #define SKEIN_256_ROUNDS 72
 #define WORD_SIZE 4

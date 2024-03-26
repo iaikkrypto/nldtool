@@ -9,6 +9,7 @@
 #include "bitmask.h"
 #include "bitpos.h"
 #include "condition_word.h"
+#include "cxxopts.hpp"
 #include "logfile.h"
 #include "step.h"
 #include "text_io_format.h"

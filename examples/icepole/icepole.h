@@ -2,7 +2,6 @@
 #define ICEPOLE_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 #define ICEPOLE_MAXROUNDS 12
 

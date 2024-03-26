@@ -2,7 +2,6 @@
 #include <iomanip>
 #include <istream>
 #include <map>
-#include <limits>
 
 #include "crypto.h"
 #include "crypto_options.h"

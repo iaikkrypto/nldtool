@@ -2,7 +2,6 @@
 #define DHASUB_H_
 
 #include "crypto.h"
-#include "cxxopts.hpp"
 
 /*! \class Dha256
  *  \brief Implementation of the DHA256 crypto function
